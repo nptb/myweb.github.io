@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân</title>
+    <!-- Link Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- THANH ĐẦU TRANG (Giữ nguyên cấu trúc trang chủ) -->
+    <header id="main-header">
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search (Ctrl + K)">
+        </div>
+        
+        <nav class="user-nav">
+            <i class="fa-regular fa-bell"></i>
+            <span class="currency">💎 10</span>
+            <div class="user-avatar"></div>
+        </nav>
+    </header>
+
+    <!-- BỐ CỤC CHÍNH 3 CỘT -->
+    <div class="app-container">
+        
+        <!-- CỘT 1: SIDEBAR TRÁI (Giữ nguyên cấu trúc trang chủ) -->
+        <aside id="left-sidebar">
+            <button class="btn-new-post">+ New post</button>
+            
+            <nav class="menu-section">
+                <a href="index.html" class="menu-item"><i class="fa fa-home"></i> For You</a>
+                <a href="#" class="menu-item"><i class="fa fa-users"></i> Following</a>
+                <a href="#" class="menu-item"><i class="fa fa-clock-rotate-left"></i> History</a>
+            </nav>
+
+            <section class="menu-section">
+                <p class="section-title">Feeds</p>
+                <a href="#" class="menu-item"><i class="fa fa-plus"></i> Add feed</a>
+            </section>
+
+            <section class="menu-section">
+                <p class="section-title">Groups</p>
+                <a href="#" class="menu-item">Game Developers</a>
+                <a href="#" class="menu-item">Machine Learning News</a>
+            </section>
+        </aside>
+
+        <!-- CỘT 2: NỘI DUNG CHÍNH (PROFILE) -->
+        <main id="profile-content">
+            <div class="profile-wrapper">
+                
+                <!-- Phần khung bìa và thông tin cơ bản -->
+                <section class="profile-header-card">
+                    <div class="cover-photo">
+                        <span>Khung bìa</span>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="avatar-large"></div>
+                        <h1 class="user-name">sagi</h1>
+                        <p class="user-handle">@sagi1412 • Joined Feb 28, 2026</p>
+                        
+                        <div class="profile-actions">
+                            <button class="btn-follow">Follow</button>
+                            <button class="btn-award"><i class="fa fa-award"></i> Award</button>
+                            <button class="btn-more"><i class="fa fa-ellipsis"></i></button>
+                        </div>
+
+                        <div class="profile-stats">
+                            <span><strong>10</strong> Reputation</span>
+                            <span><strong>0</strong> Upvotes</span>
+                            <span><strong>1</strong> Followers</span>
+                            <span><strong>0</strong> Following</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabs điều hướng hoạt động -->
+                <nav class="profile-tabs">
+                    <button class="tab-item active">Posts</button>
+                    <button class="tab-item">Replies</button>
+                    <button class="tab-item">Upvoted</button>
+                </nav>
+
+                <!-- Nội dung hoạt động (Trạng thái trống) -->
+                <section class="activity-feed">
+                    <div class="empty-state">
+                        <p>Where do we start — it's everything. Go on, share with us your best.</p>
+                        <button class="btn-new-post-large">New post</button>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- CỘT 3: SIDEBAR PHẢI (THỐNG KÊ) -->
+        <aside id="right-sidebar">
+            
+            <!-- Thống kê đọc -->
+            <section class="stat-card">
+                <header class="card-header">
+                    <h4>Reading Overview</h4>
+                    <a href="#">Learn more</a>
+                </header>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-value">37</span>
+                        <span class="stat-label">Longest streak</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">129</span>
+                        <span class="stat-label">Total reading days</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tags phổ biến -->
+            <section class="stat-card">
+                <h4>Top tags by reading days</h4>
+                <ul class="tag-stats-list">
+                    <li>
+                        <span class="tag-name ai">AI</span>
+                        <div class="progress-bar"><div class="fill" style="width: 52%;"></div></div>
+                        <span class="percentage">+52%</span>
+                    </li>
+                    <li>
+                        <span class="tag-name linux">Linux</span>
+                        <div class="progress-bar"><div class="fill" style="width: 48%;"></div></div>
+                        <span class="percentage">+48%</span>
+                    </li>
+                    <li>
+                        <span class="tag-name performance">Performance</span>
+                        <div class="progress-bar"><div class="fill" style="width: 48%;"></div></div>
+                        <span class="percentage">+48%</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Nhóm đang tham gia -->
+            <section class="stat-card">
+                <h4>Active in these Groups</h4>
+                <ul class="group-list">
+                    <li>
+                        <strong>Machine Learning News</strong>
+                        <span>@mlnews • 8.2K members</span>
+                    </li>
+                    <li>
+                        <strong>Game Developers</strong>
+                        <span>@game_developers • 14.4K members</span>
+                    </li>
+                    <li>
+                        <strong>Microsoft Learn</strong>
+                        <span>@microsoftlearn • 122 members</span>
+                    </li>
+                </ul>
+            </section>
+
+        </aside>
+
+    </div>
+
+    <!-- Nút cuộn lên đầu trang -->
+    <div class="scroll-top">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+
+</body>
+</html>

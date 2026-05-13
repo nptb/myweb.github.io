@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết bài viết</title>
+    <!-- Link Font Awesome cho icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- THANH ĐẦU TRANG (Giữ nguyên cấu trúc đồng nhất) -->
+    <header id="main-header">
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search (Ctrl + K)">
+        </div>
+        
+        <nav class="user-nav">
+            <i class="fa-regular fa-bell"></i>
+            <span class="badge">1</span>
+            <span class="fire">🔥 1</span>
+            <span class="diamond">💎 10</span>
+            <div class="user-avatar"></div>
+        </nav>
+    </header>
+
+    <!-- BỐ CỤC CHÍNH 3 CỘT -->
+    <div class="app-container">
+        
+        <!-- CỘT 1: SIDEBAR TRÁI (Giữ nguyên cấu trúc) -->
+        <aside id="left-sidebar">
+            <button class="btn-new-post">+ New post</button>
+            
+            <nav class="menu-section">
+                <a href="index.html" class="menu-item"><i class="fa fa-home"></i> For You</a>
+                <a href="#" class="menu-item"><i class="fa fa-users"></i> Following</a>
+                <a href="#" class="menu-item"><i class="fa fa-clock-rotate-left"></i> History</a>
+            </nav>
+
+            <section class="menu-section">
+                <p class="section-title">Groups</p>
+                <a href="#" class="menu-item">Game Developers</a>
+                <a href="#" class="menu-item">Machine Learning News</a>
+                <a href="#" class="menu-item active">Microsoft Learn</a>
+            </section>
+        </aside>
+
+        <!-- CỘT 2: NỘI DUNG CHI TIẾT BÀI VIẾT -->
+        <main id="post-detail">
+            <article class="post-full">
+                
+                <!-- Header của bài viết -->
+                <header class="post-header">
+                    <div class="author-info">
+                        <span class="author-name">Tên người đăng</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-read-post">
+                            <i class="fa-regular fa-file-lines"></i> Read post
+                        </button>
+                        <i class="fa fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
+
+                <!-- Tiêu đề và Nội dung -->
+                <h1 class="post-title">Tiêu đề bài viết</h1>
+                
+                <div class="post-body-text">
+                    <p>Nội dung bài viết</p>
+                </div>
+
+                <div class="post-tags">
+                    <span class="tag">#hashtag1</span>
+                    <span class="tag">#hashtag2</span>
+                </div>
+
+                <!-- Hình ảnh bài viết -->
+                <div class="post-main-image">
+                    <img src="./img/Post image.png" alt="Post Image">
+                </div>
+
+                <!-- Thống kê tương tác -->
+                <div class="post-stats">
+                    <span>131 Upvotes</span>
+                    <span>3 Comments</span>
+                    <span>1 Repost</span>
+                </div>
+
+                <!-- Thanh công cụ tương tác -->
+                <div class="post-action-bar">
+                    <div class="vote-group">
+                        <button class="btn-vote up"><i class="fa fa-arrow-up"></i></button>
+                        <button class="btn-vote down"><i class="fa fa-arrow-down"></i></button>
+                    </div>
+                    <button class="btn-action"><i class="fa-regular fa-comment"></i> Comment</button>
+                    <button class="btn-action"><i class="fa-regular fa-bookmark"></i> Bookmark</button>
+                    <button class="btn-action"><i class="fa-solid fa-link"></i> Copy</button>
+                </div>
+
+                <!-- Phần Bình luận -->
+                <section class="comments-section">
+                    <div class="sort-bar">
+                        <span>Sort: <strong>Oldest first</strong> <i class="fa fa-sort-amount-down"></i></span>
+                    </div>
+
+                    <!-- Ô nhập bình luận -->
+                    <div class="comment-input-wrapper">
+                        <div class="avatar-small"></div>
+                        <input type="text" placeholder="Share your thoughts">
+                        <button class="btn-post-comment">Post</button>
+                    </div>
+
+                    <!-- Danh sách bình luận -->
+                    <div class="comment-list">
+                        <!-- Comment 1 -->
+                        <div class="comment-item">
+                            <div class="avatar-small"></div>
+                            <div class="comment-content">
+                                <div class="comment-meta">
+                                    <strong>Peter</strong> <span>@pete-capecod • 1d</span>
+                                    <div class="reputation-tag">💎 12.3K</div>
+                                </div>
+                                <p class="comment-text">Bình luận 1</p>
+                                <div class="comment-actions">
+                                    <i class="fa fa-arrow-up"></i>
+                                    <i class="fa fa-arrow-down"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa fa-ellipsis"></i>
+                                    <span class="upvote-count">2 upvotes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment 2 -->
+                        <div class="comment-item">
+                            <div class="avatar-small"></div>
+                            <div class="comment-content">
+                                <div class="comment-meta">
+                                    <strong>Ray Wekesa</strong> <span>@yarwks • 1d</span>
+                                    <div class="reputation-tag">💎 810</div>
+                                </div>
+                                <p class="comment-text">Bình luận 2</p>
+                                <div class="comment-actions">
+                                    <i class="fa fa-arrow-up"></i>
+                                    <i class="fa fa-arrow-down"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-solid fa-share"></i>
+                                    <i class="fa fa-ellipsis"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!-- CỘT 3: SIDEBAR PHẢI (THÔNG TIN CỘNG ĐỒNG) -->
+        <aside id="right-sidebar">
+            
+            <!-- Thẻ thông tin Group/Community -->
+            <section class="community-card">
+                <div class="community-header">
+                    <div class="community-logo"></div>
+                    <div class="community-name">
+                        <h4>Microsoft Learn</h4>
+                        <p>75 Followers • 336 Upvotes</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thẻ gợi ý chia sẻ -->
+            <section class="recommend-card">
+                <p>Would you recommend this post?</p>
+                <div class="share-icons">
+                    <i class="fa-regular fa-copy" title="Copy link"></i>
+                    <i class="fa-brands fa-facebook" title="Share on Facebook"></i>
+                    <i class="fa-brands fa-x-twitter" title="Share on X"></i>
+                </div>
+            </section>
+
+        </aside>
+
+    </div>
+
+    <!-- Nút cuộn lên đầu trang -->
+    <div class="scroll-top">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+
+</body>
+</html>

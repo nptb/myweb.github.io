@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Thanh đầu trang -->
+    <header id="main-header">
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search (Ctrl + K)">
+        </div>
+        
+        <nav class="user-nav">
+            <i class="fa-regular fa-bell"></i>
+            <span class="currency">💎 10</span>
+            <div class="user-avatar"></div>
+        </nav>
+    </header>
+
+    <!-- Bố cục chính -->
+    <div class="app-container">
+        
+        <!-- Thanh menu bên cạnh -->
+        <aside id="left-sidebar">
+            <button class="btn-new-post">+ New post</button>
+            
+            <nav class="menu-section">
+                <a href="#" class="menu-item active">
+                    <i class="fa fa-home"></i> For You
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa fa-users"></i> Following
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fa fa-clock-rotate-left"></i> History
+                </a>
+            </nav>
+
+            <section class="menu-section">
+                <p class="section-title">Feeds</p>
+                <a href="#" class="menu-item">
+                    <i class="fa fa-plus"></i> Add feed
+                </a>
+            </section>
+
+            <section class="menu-section">
+                <p class="section-title">Groups</p>
+                <a href="#" class="menu-item">Game Developers</a>
+                <a href="#" class="menu-item">Machine Learning News</a>
+            </section>
+        </aside>
+
+        <!-- Khu vực nội dung chính -->
+        <main id="main-feed">
+            <div class="feed-wrapper">
+                
+                <header class="feed-header">
+                    <h3>For you</h3>
+                    <div class="feed-actions">
+                        <button class="btn-settings">Feed settings</button>
+                    </div>
+                </header>
+
+                <!-- Danh sách bài viết -->
+                <section class="posts-list">
+                    
+                    <!-- Bài viết 1 -->
+                    <article class="post-card">
+                        <header class="post-user">
+                            <div class="avatar"></div>
+                            <div class="user-info">
+                                <h4>Tên người đăng</h4>
+                                <time datetime="2023-10-27">Thời gian đăng</time>
+                            </div>
+                        </header>
+
+                        <div class="post-body">
+                            <div class="post-content">
+                                <h2>Bài viết 1</h2>
+                            </div>
+                            <img src="./img/Post image.png" alt="Hình ảnh minh họa bài viết 1" class="post-image">
+                        </div>
+
+                        <footer class="post-actions">
+                            <div class="action-item">
+                                <i class="fa fa-arrow-up"></i> 
+                                <span class="vote-count">45</span> 
+                                <i class="fa fa-arrow-down"></i>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-regular fa-comment"></i>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa fa-share"></i>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!-- Bài viết 2 -->
+                    <article class="post-card">
+                        <header class="post-user">
+                            <div class="avatar"></div>
+                            <div class="user-info">
+                                <h4>Tên người đăng</h4>
+                                <time datetime="2023-10-27">Thời gian đăng</time>
+                            </div>
+                        </header>
+
+                        <div class="post-body">
+                            <div class="post-content">
+                                <h2>Bài viết 2</h2>
+                            </div>
+                            <img src="./img/Post image_1.png" alt="Hình ảnh minh họa bài viết 2" class="post-image">
+                        </div>
+
+                        <footer class="post-actions">
+                            <div class="action-item">
+                                <i class="fa fa-arrow-up"></i> 
+                                <span class="vote-count">130</span> 
+                                <i class="fa fa-arrow-down"></i>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-regular fa-comment"></i> 
+                                <span class="comment-count">24</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa fa-share"></i>
+                            </div>
+                        </footer>
+                    </article>
+
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Nút cuộn lên đầu trang -->
+    <div class="scroll-top" role="button" aria-label="Cuộn lên đầu trang">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+
+</body>
+</html>

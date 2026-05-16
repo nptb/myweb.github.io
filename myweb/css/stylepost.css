@@ -332,7 +332,7 @@
 }
 /* Thay background bằng hình icon thực tế */
 .group-icon-box {
-    background-image: url('../img/Microsoft Learn.png'); /* Đường dẫn đến icon Microsoft Learn */
+    background-image: url('../img/Microsoft Learn.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,16 +1,4 @@
-/*
-    File này chứa các quy tắc CSS cụ thể và tinh chỉnh để
-    đảm bảo giao diện giống hệt ảnh mẫu nhất có thể.
-    Nó ghi đè các thuộc tính từ style.css khi cần thiết.
-*/
-
 /* --- HEADER SPECIFIC TWEAKS --- */
-
-/* Placeholder cho nút menu bên trái (giúp căn chỉnh search bar và user nav) */
-/* Đã được xử lý trong style.css bằng #main-header::before */
-
-/* Căn giữa thanh tìm kiếm nếu có khoảng trống lớn */
-/* Đã được xử lý trong style.css bằng flex-grow và margin auto */
 
 /* Tinh chỉnh màu và kích thước các chỉ số (Streak, Credits, Energy) nếu cần */
 .status-item .status-value {
@@ -22,8 +10,6 @@
 
 /* --- LEFT SIDEBAR SPECIFIC TWEAKS --- */
 
-/* Không có nhiều tinh chỉnh đặc biệt ở đây, đã được xử lý trong style.css */
-/* Đảm bảo các item menu active có màu và font-weight chính xác */
 .menu-item.active {
     background-color: #e6f2ff;
     color: #007bff;
@@ -49,9 +35,6 @@
 
 /* --- POST CARD SPECIFIC TWEAKS --- */
 
-/* Định nghĩa ảnh cụ thể cho mỗi bài viết */
-/* Đảm bảo các đường dẫn ảnh là chính xác */
-
 /* Ảnh cho Bài viết 1 */
 .posts-list article:nth-child(1) .post-img-link img {
     content: url('../img/Post image.png'); /* Ảnh của bài viết 1 */
@@ -59,13 +42,10 @@
 
 /* Ảnh cho Bài viết 2 */
 .posts-list article:nth-child(2) .post-img-link img {
-    content: url('../img/Post image.png'); /* Giả định có ảnh khác cho bài viết 2 */
-    /* Nếu chỉ có một ảnh, hãy đổi thành url('../img/Post image.png'); */
-    /* Chiều cao và object-fit đã được đặt trong style.css */
+    content: url('../img/Post image.png');
+
 }
 
-/* Avatar nhỏ trong bài viết */
-/* Nếu bạn muốn các avatar nhỏ khác nhau cho mỗi người đăng, bạn có thể thêm vào đây */
 .posts-list article .avatar-small {
     background-image: url('../img/avt.png'); /* Sử dụng ảnh avatar chung cho tất cả */
     background-size: cover;

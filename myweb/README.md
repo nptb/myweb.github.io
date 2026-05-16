@@ -473,7 +473,7 @@ GIÚP TÔI VIẾT FILE "STYLETC.CSS" ĐỂ CÓ GIAO DIỆN GIỐNG VỚI ẢNH S
 
 <img width="815" height="836" alt="image" src="https://github.com/user-attachments/assets/49017009-8581-4d99-ba18-8410c0c41990" />
 
-THỰC HIỆN CHỈNH SỬA LẠI NHỮNG ĐIỂM MÀ BẠN CHƯA HÀI LÒNG HOẶC THẤY CẦN CHỈNH SỬA LẠI ĐỂ RA KẾT QUẢ NHƯ Ý
+THỰC HIỆN CHỈNH SỬA LẠI NHỮNG ĐIỂM CHƯA HÀI LÒNG ĐỂ RA KẾT QUẢ NHƯ Ý
 
 LÀM TƯƠNG TỰ VỚI NHỮNG TRANG CÒN LẠI
 

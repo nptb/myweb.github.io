@@ -1,0 +1,435 @@
+/* =========================================
+   STYLE CHO TRANG CHI TIẾT BÀI VIẾT (stylepost.css)
+   ========================================= */
+
+/* --- Main Feed Adjustments for Post Detail --- */
+#main-feed {
+    display: block; /* Thay đổi từ flex thành block để article chiếm toàn bộ chiều rộng */
+}
+
+.feed-wrapper {
+    width: 100%;
+    max-width: var(--max-content-width);
+    margin: 0 auto; /* Căn giữa nội dung chính */
+}
+
+
+/* --- Post Detail Card --- */
+.post-card.post-detail-view {
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow); /* Thêm đổ bóng nhẹ cho card */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.author-info {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.btn-settings {
+    background: var(--primary-black);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn-settings i {
+    color: white;
+}
+
+.post-title {
+    font-size: 32px; /* Kích thước lớn hơn cho tiêu đề bài viết */
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.post-body-text {
+    font-size: 16px;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.post-body-text p {
+    margin-bottom: 16px;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tag-item {
+    background: var(--bg-light);
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.post-main-image {
+    width: 100%;
+    max-height: 400px; /* Giới hạn chiều cao của ảnh chính */
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.post-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-stats {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.post-actions-bar {
+    display: flex;
+    gap: 32px;
+    color: var(--text-muted);
+    font-size: 16px;
+    justify-content: center; /* Căn giữa các icon */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.post-actions-bar .action-item {
+    display: flex;
+    flex-direction: column; /* Xếp icon và số liệu theo chiều dọc */
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px; /* Kích thước chữ nhỏ hơn cho số liệu */
+}
+
+.post-actions-bar .action-item i {
+    font-size: 20px; /* Kích thước icon lớn hơn */
+    margin-bottom: 4px;
+}
+
+/* --- Comment Section --- */
+.comment-section {
+    width: 100%;
+    max-width: var(--max-content-width);
+    margin: 0 auto 40px auto; /* Căn giữa và thêm khoảng cách dưới */
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.comment-sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.comment-sort select {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    appearance: none; /* Bỏ style mặc định của select */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 28px;
+    cursor: pointer;
+}
+
+.comment-form {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start; /* Căn trên cùng */
+    margin-bottom: 24px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.comment-form .avatar-small {
+    background-image: url('../img/avt.png'); /* Sử dụng avatar mặc định của bạn */
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.comment-input-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.comment-input-area textarea {
+    width: 100%;
+    min-height: 70px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 15px;
+    resize: vertical; /* Cho phép thay đổi chiều cao */
+    outline: none;
+    font-family: inherit;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+}
+
+.comment-input-area textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.comment-input-area .post-btn {
+    align-self: flex-end; /* Nút "Post" căn sang phải */
+    background: var(--primary-black);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.comment-item .avatar-small {
+    background-image: url('../img/avt.png'); /* Hoặc placeholder khác */
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.comment-content-area {
+    flex: 1;
+}
+
+.comment-meta {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.comment-handle, .comment-time {
+    color: var(--text-muted);
+}
+
+.comment-text {
+    font-size: 15px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.comment-actions .action-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.comment-actions .upvotes {
+    margin-left: auto; /* Đẩy số upvotes sang phải */
+    font-weight: 600;
+}
+
+.comment-actions .action-item:hover {
+    color: var(--primary-purple);
+}
+
+/* --- Right Sidebar Adjustments --- */
+#right-sidebar {
+    padding: 32px 24px; /* Giảm padding trên dưới để cân đối hơn */
+    width: var(--right-sidebar-width); /* Đảm bảo width đã được định nghĩa trong _variables.css */
+    flex-shrink: 0;
+    position: sticky; /* Giữ sidebar khi cuộn */
+    top: var(--header-height); /* Dính dưới header */
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow); /* Thêm đổ bóng */
+}
+
+.community-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.group-icon-box {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-purple); /* Màu tím làm placeholder */
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px; /* Ví dụ: nếu có icon */
+}
+/* Thay background bằng hình icon thực tế */
+.group-icon-box {
+    background-image: url('../img/Microsoft Learn.png'); /* Đường dẫn đến icon Microsoft Learn */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.community-name h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.community-name p {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.recommend-card p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.share-icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+}
+
+.share-icons i {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--bg-light);
+    color: var(--text-muted);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.share-icons i:hover {
+    background: var(--border-color);
+    color: var(--text-main);
+}
+/* Các icon mạng xã hội có màu đặc trưng khi hover */
+.share-icons .fa-facebook:hover { color: #1877f2; }
+.share-icons .fa-x-twitter:hover { color: #000000; } /* Twitter X là đen */
+.share-icons .fa-copy:hover { color: var(--primary-purple); } /* Màu tím cho copy link */
+
+
+/* --- Scroll Top Button --- */
+.scroll-top {
+    bottom: 24px;
+    right: 24px;
+    width: 48px; /* Lớn hơn một chút */
+    height: 48px;
+    font-size: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   RESPONSIVE (LUÔN ĐỂ CUỐI FILE) - Cần đảm bảo rằng các media queries trong style.css không ghi đè mất
+   ========================================= */
+
+@media (max-width: 1200px) {
+    /* Màn hình trung bình, giữ sidebar phải nếu cần thiết, hoặc ẩn theo style.css */
+    /* Nếu style.css ẩn, thì ở đây không cần làm gì thêm */
+}
+
+@media (max-width: 768px) {
+    /* Trên mobile, căn chỉnh lại padding và kích thước */
+    .post-card.post-detail-view {
+        padding: 16px;
+    }
+    .post-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    .post-main-image {
+        max-height: 250px;
+    }
+    .comment-section {
+        padding: 16px;
+    }
+    .comment-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .comment-form .avatar-small {
+        display: none; /* Ẩn avatar nhỏ trên mobile để tiết kiệm không gian */
+    }
+    .comment-input-area .post-btn {
+        align-self: stretch; /* Nút post chiếm toàn bộ chiều rộng */
+    }
+}

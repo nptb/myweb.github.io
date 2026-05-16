@@ -1,0 +1,144 @@
+/*
+    File này chứa các quy tắc CSS cụ thể và tinh chỉnh để
+    đảm bảo giao diện giống hệt ảnh mẫu nhất có thể.
+    Nó ghi đè các thuộc tính từ style.css khi cần thiết.
+*/
+
+/* --- HEADER SPECIFIC TWEAKS --- */
+
+/* Placeholder cho nút menu bên trái (giúp căn chỉnh search bar và user nav) */
+/* Đã được xử lý trong style.css bằng #main-header::before */
+
+/* Căn giữa thanh tìm kiếm nếu có khoảng trống lớn */
+/* Đã được xử lý trong style.css bằng flex-grow và margin auto */
+
+/* Tinh chỉnh màu và kích thước các chỉ số (Streak, Credits, Energy) nếu cần */
+.status-item .status-value {
+    color: #333; /* Đảm bảo màu chữ đậm hơn */
+}
+.status-item .color-pink {
+    color: #ff69b4; /* Giữ màu hồng đặc trưng */
+}
+
+/* --- LEFT SIDEBAR SPECIFIC TWEAKS --- */
+
+/* Không có nhiều tinh chỉnh đặc biệt ở đây, đã được xử lý trong style.css */
+/* Đảm bảo các item menu active có màu và font-weight chính xác */
+.menu-item.active {
+    background-color: #e6f2ff;
+    color: #007bff;
+    font-weight: 600;
+}
+.menu-item.active i {
+    color: #007bff;
+}
+
+/* --- MAIN FEED SPECIFIC TWEAKS --- */
+
+/* Header của feed */
+.feed-header h3 {
+    font-weight: 600; /* Đảm bảo tiêu đề "For you" đậm */
+    color: #333;
+}
+
+.btn-settings {
+    background-color: #f0f2f5;
+    color: #666;
+    font-weight: 500;
+}
+
+/* --- POST CARD SPECIFIC TWEAKS --- */
+
+/* Định nghĩa ảnh cụ thể cho mỗi bài viết */
+/* Đảm bảo các đường dẫn ảnh là chính xác */
+
+/* Ảnh cho Bài viết 1 */
+.posts-list article:nth-child(1) .post-img-link img {
+    content: url('../img/Post image.png'); /* Ảnh của bài viết 1 */
+}
+
+/* Ảnh cho Bài viết 2 */
+.posts-list article:nth-child(2) .post-img-link img {
+    content: url('../img/Post image.png'); /* Giả định có ảnh khác cho bài viết 2 */
+    /* Nếu chỉ có một ảnh, hãy đổi thành url('../img/Post image.png'); */
+    /* Chiều cao và object-fit đã được đặt trong style.css */
+}
+
+/* Avatar nhỏ trong bài viết */
+/* Nếu bạn muốn các avatar nhỏ khác nhau cho mỗi người đăng, bạn có thể thêm vào đây */
+.posts-list article .avatar-small {
+    background-image: url('../img/avt.png'); /* Sử dụng ảnh avatar chung cho tất cả */
+    background-size: cover;
+    background-position: center;
+}
+
+.posts-list article:nth-child(1) .post-actions .action-item:first-child {
+    color: #888; /* Màu xám mặc định cho 45 upvote */
+    font-weight: 500;
+}
+.posts-list article:nth-child(1) .post-actions .action-item:nth-child(2) {
+    color: #888; /* Màu xám mặc định cho comment icon */
+    font-weight: 500;
+}
+
+.posts-list article:nth-child(2) .post-actions .action-item:first-child {
+    color: #333; /* Màu đậm hơn cho 130 upvote */
+    font-weight: 600;
+}
+
+.posts-list article:nth-child(2) .post-actions .action-item:nth-child(2) {
+    color: #333; /* Màu đậm hơn cho 24 comment */
+    font-weight: 600;
+}
+
+/* Icon trong post actions */
+.post-actions .action-item i {
+    color: #888; /* Màu icon mặc định */
+}
+
+/* Tiêu đề bài viết */
+.post-content h2 a {
+    font-weight: 600; /* Đảm bảo tiêu đề bài viết đậm */
+    color: #333; /* Đảm bảo màu chữ chính xác */
+}
+
+/* Số lượng tương tác (Upvote, Comment) cho Bài viết 1 */
+.posts-list article:nth-child(1) .post-actions .action-item:first-child {
+    /* Mặc định 45 upvote */
+    color: #888; /* Giữ màu xám */
+    font-weight: 500;
+}
+.posts-list article:nth-child(1) .post-actions .action-item:nth-child(2) {
+    /* Mặc định không có số comment */
+    color: #888; /* Giữ màu xám */
+    font-weight: 500;
+}
+
+
+/* Số lượng tương tác (Upvote, Comment) cho Bài viết 2 */
+.posts-list article:nth-child(2) .post-actions .action-item:first-child {
+    /* 130 upvote */
+    color: #333; /* Màu đậm hơn như trong ảnh mẫu */
+    font-weight: 600;
+}
+
+.posts-list article:nth-child(2) .post-actions .action-item:nth-child(2) {
+    /* 24 comment */
+    color: #333; /* Màu đậm hơn như trong ảnh mẫu */
+    font-weight: 600;
+}
+
+/* Icon trong post actions */
+.post-actions .action-item i {
+    color: #888; /* Màu icon mặc định */
+}
+
+/* --- SCROLL TOP BUTTON TWEAKS --- */
+.scroll-top {
+    background-color: #343a40; /* Màu xám đậm */
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.scroll-top:hover {
+    background-color: #495057;
+}

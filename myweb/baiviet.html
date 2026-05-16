@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết bài viết - Microsoft Learn</title>
+    <title>Chi tiết bài viết</title>
     <!-- Link Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- LIÊN KẾT FILE CSS RIÊNG -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/stylepost.css">
 </head>
 <body>
 
@@ -65,40 +66,109 @@
         </aside>
 
         <!-- NỘI DUNG CHI TIẾT BÀI VIẾT -->
-        <main id="main-feed">
-            <div class="feed-wrapper">
-                
-                <article class="post-card post-detail-view">
-            
-                    <header class="post-header">
-                        <div class="author-info">Tên người đăng</div>
-                        <button class="btn-settings">
-                            <i class="fa-regular fa-file-lines"></i> Read post
-                        </button>
-                    </header>
-
-                    <h1 class="post-title">Tiêu đề bài viết</h1>
+                <main id="main-feed">
+                    <div class="feed-wrapper">
+                        
+                        <article class="post-card post-detail-view">
                     
-                    <div class="post-body-text">
-                        <p>Nội dung bài viết chi tiết sẽ hiển thị ở đây...</p>
-                    </div>
+                            <header class="post-header">
+                                <div class="author-info">Tên người đăng</div>
+                                <button class="btn-settings">
+                                    <i class="fa-regular fa-file-lines"></i> Read post
+                                </button>
+                            </header>
 
-                    <div class="post-tags">
-                        <span class="tag-item">#hashtag1</span>
-                        <span class="tag-item">#hashtag2</span>
-                    </div>
+                            <h1 class="post-title">Tiêu đề bài viết</h1>
+                            
+                            <div class="post-body-text">
+                                <p>Nội dung bài viết chi tiết sẽ hiển thị ở đây...</p>
+                            </div>
 
-                    <div class="post-main-image">
-                        <img src="./img/Post image.png" alt="Post Image">
-                    </div>
+                            <div class="post-tags">
+                                <span class="tag-item">#hashtag1</span>
+                                <span class="tag-item">#hashtag2</span>
+                            </div>
 
-                    <div class="post-stats">
-                        131 Upvotes • 3 Comments • 1 Repost
-                    </div>
+                            <div class="post-main-image">
+                                <img src="./img/Post image.png" alt="Post Image">
+                            </div>
 
-                </article>
-            </div>
-        </main>
+                            <div class="post-stats">
+                                131 Upvotes • 3 Comments • 1 Repost
+                            </div>
+
+                            <div class="post-actions-bar">
+                                <div class="action-item"><i class="fa-solid fa-arrow-up"></i></div>
+                                <div class="action-item"><i class="fa-regular fa-comment"></i></div>
+                                <div class="action-item"><i class="fa-regular fa-bookmark"></i></div>
+                                <div class="action-item"><i class="fa-solid fa-share-nodes"></i></div>
+                            </div>
+
+                        </article>
+
+                        <!-- Comment Section -->
+                        <section class="comment-section">
+                            <div class="comment-sort">
+                                <span>Sort:</span>
+                                <select>
+                                    <option value="oldest-first">Oldest first</option>
+                                    <option value="newest-first">Newest first</option>
+                                    <option value="top-comments">Top comments</option>
+                                </select>
+                            </div>
+
+                            <div class="comment-form">
+                                <div class="avatar-small"></div> <!-- Avatar người dùng hiện tại -->
+                                <div class="comment-input-area">
+                                    <textarea placeholder="Share your thoughts"></textarea>
+                                    <button class="post-btn">Post</button>
+                                </div>
+                            </div>
+
+                            <div class="comment-list">
+                                <!-- Comment Item 1 -->
+                                <div class="comment-item">
+                                    <div class="avatar-small"></div>
+                                    <div class="comment-content-area">
+                                        <div class="comment-meta">
+                                            <span class="comment-author">Peter</span>
+                                            <span class="comment-handle">@peterlappecoid</span>
+                                            <span class="comment-time"> • 1d</span>
+                                        </div>
+                                        <p class="comment-text">Bình luận 1</p>
+                                        <div class="comment-actions">
+                                            <div class="action-item"><i class="fa-solid fa-arrow-up"></i></div>
+                                            <div class="action-item"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="action-item"><i class="fa-regular fa-comment"></i> Reply</div>
+                                            <div class="action-item"><i class="fa-solid fa-ellipsis"></i></div>
+                                            <span class="upvotes">2 upvotes</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Comment Item 2 -->
+                                <div class="comment-item">
+                                    <div class="avatar-small"></div>
+                                    <div class="comment-content-area">
+                                        <div class="comment-meta">
+                                            <span class="comment-author">Ray Wekesa</span>
+                                            <span class="comment-handle">@rayweks</span>
+                                            <span class="comment-time"> • 1d</span>
+                                        </div>
+                                        <p class="comment-text">Bình luận 2</p>
+                                        <div class="comment-actions">
+                                            <div class="action-item"><i class="fa-solid fa-arrow-up"></i></div>
+                                            <div class="action-item"><i class="fa-solid fa-arrow-down"></i></div>
+                                            <div class="action-item"><i class="fa-regular fa-comment"></i> Reply</div>
+                                            <div class="action-item"><i class="fa-solid fa-ellipsis"></i></div>
+                                            <span class="upvotes">810</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </main>
 
         <!-- SIDEBAR PHẢI -->
         <aside id="right-sidebar">

@@ -1,0 +1,348 @@
+/* =========================================
+   PROFILE PAGE STYLES (styleinfo.css)
+   ========================================= */
+
+/* Cột chính của trang cá nhân */
+#profile-content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 32px; /* Đồng nhất với #main-feed */
+    display: flex;
+    justify-content: center;
+}
+
+.profile-wrapper {
+    width: 100%;
+    max-width: var(--max-content-width); /* Giới hạn chiều rộng nội dung chính */
+}
+
+/* Khung trắng tổng thể của Profile */
+.profile-header-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    margin-bottom: 16px; /* Khoảng cách với các phần tử khác nếu có */
+    overflow: hidden; /* Đảm bảo ảnh bìa không tràn */
+}
+
+/* 1. Phần ảnh bìa */
+.cover-photo {
+    width: 100%;
+    height: 180px; /* Chiều cao ảnh bìa */
+    background: var(--bg-light); /* Màu nền xám nhạt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 2. Phần thông tin người dùng */
+.profile-info {
+    padding: 24px;
+    padding-top: 0; /* Ảnh đại diện sẽ đè lên phần này */
+    text-align: left; /* Căn chỉnh nội dung trong phần này */
+}
+
+.avatar-large-wrapper {
+    width: 96px; /* Kích thước ảnh đại diện lớn */
+    height: 96px;
+    border-radius: 50%;
+    border: 4px solid white; /* Viền trắng quanh avatar */
+    margin-top: -48px; /* Đẩy avatar lên để đè lên cover photo */
+    background: white; /* Đảm bảo nền trắng khi viền ngoài trong suốt */
+    position: relative;
+    z-index: 1; /* Đảm bảo avatar nằm trên cover */
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow nhẹ cho avatar */
+}
+
+.avatar-large {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.user-handle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.btn-follow {
+    background: var(--primary-black);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.btn-award, .btn-more {
+    background: var(--bg-light);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 10px 14px; /* Padding nhỏ hơn cho icon */
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-award { gap: 8px; font-weight: 600; font-size: 15px; }
+
+.profile-stats {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+}
+
+.stat-num strong {
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-right: 4px;
+}
+.stat-num span {
+    color: var(--text-muted);
+}
+
+/* 3. Phần Activity (Nằm trong khung trắng) */
+.profile-activity-section {
+    padding: 24px;
+    border-top: 1px solid var(--border-color); /* Đường kẻ phân cách */
+}
+
+.activity-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.profile-tabs {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.tab-item {
+    background: transparent;
+    border: none;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    position: relative;
+    cursor: pointer;
+}
+
+.tab-item.active {
+    color: var(--primary-black);
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Đặt đường gạch dưới lên trên đường border-top của section */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-black);
+    border-radius: 1px;
+}
+
+/* Tái sử dụng .empty-state từ style.css */
+/* .activity-feed đã có trong style.css, chỉ cần đảm bảo nó nằm trong .profile-activity-section */
+
+
+/* =========================================
+   RIGHT SIDEBAR STYLES
+   ========================================= */
+#right-sidebar {
+    width: var(--right-sidebar-width);
+    border-left: 1px solid var(--border-color);
+    padding: 32px 24px;
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    background: var(--bg-body); /* Đảm bảo nền trắng */
+    z-index: 99; /* Đảm bảo nằm trên các nội dung khác nếu cần */
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow); /* Sử dụng shadow đã định nghĩa */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-header h4 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.link-more {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.link-more:hover {
+    color: var(--primary-purple);
+    text-decoration: underline;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-item-box {
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.stat-item-box .stat-value {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--primary-black);
+}
+
+.stat-item-box .stat-label {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Tags phổ biến */
+.tag-stats-list {
+    display: flex; /* Thay đổi thành flex để các item xếp chồng */
+    flex-direction: column; /* Xếp theo chiều dọc */
+    gap: 12px; /* Khoảng cách giữa các tag item */
+}
+
+.tag-stats-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Đẩy tên tag và phần trăm ra 2 phía */
+    font-size: 14px;
+}
+
+.tag-name {
+    flex-basis: auto; /* Tên tag không cần cố định chiều rộng nữa */
+    min-width: 60px; /* Đảm bảo đủ chỗ cho tên tag dài */
+    font-weight: 500;
+    color: var(--text-main);
+    margin-right: 12px; /* Khoảng cách giữa tên tag và progress bar */
+}
+
+.progress-container {
+    flex-grow: 1; /* Cho phép progress bar chiếm không gian còn lại */
+    height: 8px;
+    background: var(--bg-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--primary-purple);
+}
+
+.percentage {
+    width: auto; /* Loại bỏ chiều rộng cố định */
+    min-width: 40px; /* Đảm bảo đủ chỗ cho số % */
+    text-align: right;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 13px;
+    margin-left: 12px; /* Khoảng cách giữa progress bar và phần trăm */
+}
+
+/* =========================================
+   RESPONSIVE CHO TRANG PROFILE
+   ========================================= */
+@media (max-width: 1200px) {
+    /* Đã xử lý trong style.css: #right-sidebar { display: none; } */
+    #profile-content {
+        /* Khi cột phải ẩn, nội dung chính có thể rộng hơn */
+        max-width: 900px; /* Tăng chiều rộng tối đa */
+        margin-right: auto; /* Căn giữa */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Đã xử lý trong style.css: #left-sidebar { display: none; } */
+    #profile-content {
+        margin-left: 0; /* Khi sidebar trái ẩn, loại bỏ margin */
+        padding: 16px; /* Giảm padding trên mobile */
+    }
+
+    .profile-info {
+        padding: 16px; /* Giảm padding */
+        padding-top: 0;
+    }
+
+    .avatar-large-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+        margin-bottom: 12px;
+    }
+
+    .user-name {
+        font-size: 22px;
+    }
+
+    .profile-actions {
+        flex-wrap: wrap; /* Cho phép các nút xuống dòng */
+        margin-bottom: 20px;
+    }
+
+    .profile-stats {
+        flex-wrap: wrap; /* Cho phép các số liệu xuống dòng */
+        gap: 16px;
+    }
+
+    .profile-activity-section {
+        padding: 16px;
+    }
+
+    .tab-item {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+}

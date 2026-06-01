@@ -10,7 +10,7 @@
 
 ### GIAO DIỆN TRANG WEB:
 
-    TRANG CHỦ: HIỂN THỊ TIN TỨC MỚI, LỊCH SỬ ĐỌC, NHỮNG TIN ĐÃ LƯU, GRUOPS ĐÃ THAM GIA
+    TRANG CHỦ: HIỂN THỊ TIN TỨC MỚI, LỊCH SỬ ĐỌC, NHỮNG TIN ĐÃ LƯU, GROUPS ĐÃ THAM GIA
 
 <img width="819" height="838" alt="image" src="https://github.com/user-attachments/assets/8a0c1d1b-7cf2-49b3-8ef7-247ef3b2b595" />
 
@@ -18,7 +18,7 @@
 
 <img width="1006" height="838" alt="image" src="https://github.com/user-attachments/assets/eecf9c1f-69be-48b7-96c4-a49ecd666de0" />
 
-    TRANG CÁ NHÂN: HIỂN THỊ NHỮNG THÔNG TIN CÁ NHÂN, SỐ NGÀY ĐỌC LIÊN TIẾP, CHUỖI ĐỌC DÀI NHẤT, NHỮNG KHÍA CẠNH QUAN TÂM NHIỀU NHẤT
+    TRANG CÁ NHÂN: HIỂN THỊ NHỮNG THÔNG TIN CÁ NHÂN, SỐ NGÀY ĐỌC LIÊN TIẾP, CHUỖI ĐỌC DÀI NHẤT, NHỮNG BÀI VIẾT ĐANG ĐƯỢC QUAN TÂM NHIỀU NHẤT
 
 <img width="1042" height="883" alt="image" src="https://github.com/user-attachments/assets/17e06e4c-3bc2-4f12-8b5d-22f900a251ef" />
 
